@@ -1,21 +1,20 @@
- const inicio = () =>
-    let miNumero;
+const inicio = () => {
+    let minumero;
     do {
-        miNumero = parseInt(prompt("Hola, ingresa un número entre 1 y 20"));
-        if(isNaN(miNumero) || miNumero < 1 || miNumero > 20){
-            alert("Tú N° ingresado está fuera del rango (1 al 20); vuelve a ingresar");
+        minumero = parseInt(prompt("ingresa tu número desde 1 a 20, el resultado se mostrará por CONSOLA"));
+        if (isNaN(minumero) || minumero < 1 || minumero > 20) {
+            alert("El N° que ingresaste está fuera de rango (1 - 20); repite el ingreso.");
+          
         }
-        while (isNaN(miNumero) || miNumero < 1 || miNumero > 20);
-        let auxiliar = '';
-        for (let index = 1; index <= miNumero; index++) {
-            console.log('${index} x ${numero} = ${numero * index}');
-            let acumulacion = 1;
-            for (let i = 1; i <= index; i++){
-                acumulacion *= i;
-            }
-            aux += 'El resultado Factorial de ${index} es: ${acumulador}\n'
+    } while (isNaN(minumero) || minumero < 1 || minumero > 20);
+    let aux = '';
+    for (let index = 1; index <= minumero; index++) {
+        console.log(`${index} x ${minumero} = ${minumero * index}`);
+        let acumulador = 1;
+        for (let i = 1; i <= index; i++) {
+            acumulador *= i;
         }
-
-        console.log(auxiliar);
-
+        aux += `El resultado Factorial de ${index} es: ${acumulador}\n`
     }
+    console.log(aux);
+}
